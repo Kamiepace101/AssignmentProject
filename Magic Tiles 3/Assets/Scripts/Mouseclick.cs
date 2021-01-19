@@ -5,7 +5,7 @@ using UnityEngine;
 public class Mouseclick : MonoBehaviour
 {
     [SerializeField]
-    private float _speed = 2f;
+    private float _speed = 3f;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,9 +25,10 @@ public class Mouseclick : MonoBehaviour
         //make the boxes vanish
         //if the pressedDestroyButton = true
         // if(pressedDestroyButton)
-        // {
+        //  {
         //     Debug.Log("You pressed the left mouse button");
-        // }
+        //  }
+        //vector3.down = vector3(0,26,0)
         transform.Translate(Vector3.down * _speed * Time.deltaTime);
     }
 
