@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class DeadZone : MonoBehaviour
 {
+    [SerializeField]
     // Start is called before the first frame update
     void Start()
     {
@@ -18,6 +19,7 @@ public class DeadZone : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
+        
         if(other.tag == "Blue")
         {
             TimedSpawn timedSpawn = GameObject.Find("Spawner").GetComponent<TimedSpawn>();

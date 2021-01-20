@@ -36,6 +36,11 @@ public class Mouseclick : MonoBehaviour
     private void OnMouseDown() 
     {
         Debug.Log("You clicked the tile");
+        ScoreKeeper scoreKeeper = GameObject.FindObjectOfType<ScoreKeeper>();
+        if(scoreKeeper != null)
+        {
+            scoreKeeper.IncrementScore();
+        }
         Destroy(gameObject);
     }
 }
