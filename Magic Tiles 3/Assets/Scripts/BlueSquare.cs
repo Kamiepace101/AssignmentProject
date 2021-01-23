@@ -5,7 +5,10 @@ using UnityEngine;
 public class BlueSquare : MonoBehaviour
 {
     [SerializeField]
-    private float force = 1000f;
+    void OnTriggerEnter2D(Collider2D other) 
+    {
+        Debug.Log("Hit Deadzone");
+    }
     void Update () 
     {
         if (transform.position.y >= -8.5)
